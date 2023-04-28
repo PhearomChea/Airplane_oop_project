@@ -1,5 +1,5 @@
-import { Airplan } from "./Ariplance/Airplance";
-export class Ariline {
+import { Airplan } from "./Airplance/Airplance";
+export class Airline {
     private airlineName : string;
     private airplanes : Airplan[] = []
     constructor(arilineName:string){

@@ -1,5 +1,5 @@
 
-export class Ariport{
+export class Airport{
     private airportName : string;
     private city : string
     constructor(airportName : string,city:string){

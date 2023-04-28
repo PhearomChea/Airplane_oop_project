@@ -4,7 +4,7 @@ export enum TypeOfTicket{
     type2 = "Economy Flex",
     type3 = "Bustiness Class"
 }
-export class ticket {
+export class Ticket {
     private ticketCode :string;
     private typeOfTicket : TypeOfTicket
     constructor(ticketCode:string,typeOfTicket : TypeOfTicket){
