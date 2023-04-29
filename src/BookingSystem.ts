@@ -25,14 +25,14 @@ export class BookingCompany{
     }
    
    
-    // getAllCustomerReturnTrip(){
-    //     let listCustomer:Customer[] = [];
-    //     for (let booking of this.bookings){  
-    //         if (booking.hasReturnTrip()){
-    //             listCustomer.push(booking.getCustomerReturnTrip())
-    //         }        
-    //     }
-    //     return listCustomer;
-    // }
+    getAllCustomerReturnTrip(){
+        let listCustomer = [];
+        for (let booking of this.bookings){  
+            if (booking.hasReturnTrip()){
+                listCustomer.push(booking.getCustomerReturnTrip())
+            }        
+        }
+        return listCustomer;
+    }
 
 }

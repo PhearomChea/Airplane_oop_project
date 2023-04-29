@@ -26,11 +26,8 @@ export class Booking{
     }
     getCustomerReturnTrip(){
         if (this.hasReturnTrip()){
-            if (this.trip.getTypeTrip() === typeTrip.RETURN_TICKET){
-                return this.customer
-            }
+            return this.customer
         }
-        
     }
   
    
