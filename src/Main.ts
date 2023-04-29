@@ -106,13 +106,13 @@ let airplane3 = new Airplane('FF90',120);
 let airplane4 = new Airplane('SS21',120);
 
 //-----Create Flight object
-let flight1 = new Flight('P-T01',Pilot01,Co_Pilot01,day1,time1,gate1,route1,airplane1);
-let flight2 = new Flight('P-T02',Pilot02,Co_Pilot01,day1,time2,gate1,route2,airplane2);
-let flight3 = new Flight('P-T03',Pilot03,Co_Pilot01,day1,time1,gate2,route3,airplane4);
-let flight4 = new Flight('P-T04',Pilot01,Co_Pilot01,day1,time1,gate4,route4,airplane3);
-let flight5 = new Flight('P-T05',Pilot01,Co_Pilot01,day1,time1,gate4,route4,airplane3);
-let flight6 = new Flight('P-T06',Pilot01,Co_Pilot01,day1,time1,gate4,route4,airplane3);
-let flight7 = new Flight('P-T07',Pilot01,Co_Pilot01,day1,time1,gate4,route4,airplane3);
+let flight1 = new Flight('T-F01',Pilot01,Co_Pilot01,day1,time1,gate1,route1,airplane1);
+let flight2 = new Flight('T-F02',Pilot02,Co_Pilot01,day1,time2,gate1,route2,airplane2);
+let flight3 = new Flight('T-F03',Pilot03,Co_Pilot01,day1,time1,gate2,route3,airplane4);
+let flight4 = new Flight('T-F04',Pilot01,Co_Pilot01,day1,time1,gate4,route4,airplane3);
+let flight5 = new Flight('T-F05',Pilot01,Co_Pilot01,day1,time1,gate4,route4,airplane3);
+let flight6 = new Flight('T-F06',Pilot01,Co_Pilot01,day1,time1,gate4,route4,airplane3);
+let flight7 = new Flight('T-F07',Pilot01,Co_Pilot01,day1,time1,gate4,route4,airplane3);
 
 
 //-----Create Airline object
@@ -165,28 +165,24 @@ airport1.addFlight(flight3);
 //  --==============User story======================--
 //  --------------------------------------------------
 
-// user Story 1 get get the full details of a passenger’s trip from their Booking Referent number------
+// user Story 1 get get the full details of a passenger’s trip from their Booking Referent number
 // console.log(company1.getBookingDetail('booking1'));
 
 // user story 2 check custmer have booking return ticket 
 // console.log(company1.getAllCustomerReturnTrip())
 
-// get bookingId or bookingReferent -----------
+// get bookingId or bookingReferent
 // console.log(booking1.getBookingId());
 
-// console.log(company1);
-// console.log(trip1)
 
 // user story 3 check pilot flight
 // console.log(airline1.getAllFlightPilot("PL01",day1));
 
 // user stroy 4 check meal for flight
-// console.log(company1.getMealforFlight("P-T01"))
+// console.log(company1.getMealforFlight("T-F01"));
 
 // user story 5 get salary
-// console.log(airline1.getSalaryForEmployyees())
+// console.log(airline1.getSalaryForEmployyees());
 
 // user story 6 get gate of flight
-// console.log(airport1.getGateOfFlight("P-T01",day1))
-
-// console.log(booking1.getTrips().getFlight("P-T01")?.getFlightId());
+// console.log(airport1.getGateOfFlight("T-F01",day1));
