@@ -1,3 +1,4 @@
+import { Meal } from "../Flight/Meal/Meal";
 import { Customer } from "../Person/Customer/Customer";
 import { Bag } from "./Trips/Bag";
 import { Ticket } from "./Trips/Ticket";
@@ -9,13 +10,15 @@ export class Booking{
     private ticket : Ticket;
     private trip:Trip;
     private customer:Customer;
+    private meal: Meal[];
     private bages:Bag[]=[];
-    constructor(bookingId:string,price:number,ticket:Ticket,trip:Trip,customer:Customer,bags:Bag[]){
+    constructor(bookingId:string,price:number,ticket:Ticket,trip:Trip,customer:Customer,meal:Meal[],bags:Bag[]){
         this.bookingId = bookingId
         this.price = price
         this.ticket = ticket
         this.trip = trip
         this.customer = customer
+        this.meal = meal
         this.bages = bags
     }
     getBookingId(){
@@ -28,5 +31,8 @@ export class Booking{
         if (this.hasReturnTrip()){
             return this.customer
         }
-    }  
+    }
+  
+   
+    
 }

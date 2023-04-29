@@ -2,30 +2,40 @@ import { Airline } from "../Airline/Airline";
 import { Airport } from "../Airport/Airport";
 import { Gate } from "../Airport/Gate/Gate";
 import { Route } from "../Airport/Route/Route";
-import { Pilot } from "../Person/Employee/Pilot";
+import { Employee } from "../Person/Employee/Employee";
 import { Date } from "./Date/Date";
 import { Meal } from "./Meal/Meal"
 
 export class Flight{
-    private flightCode:string
-    private meals:Meal[] = [];
-    private pilot:Pilot
-    private datetime:Date
+    private flightId:string
+    private pilot:Employee
+    private coPilot:Employee
+    private dates:Date
     private gate:Gate
     private route:Route
-    private airline:Airline
-    private airport:Airport
-    constructor(flightCode:string,meals:Meal[],pilot:Pilot,datetime:Date,gate:Gate,route:Route,airpline:Airline,airport:Airport){
-        this.flightCode = flightCode,
-        this.meals = meals,
+    constructor(flightId:string,pilot:Employee,coPilot:Employee,dates:Date,gate:Gate,route:Route){
+        this.flightId = flightId,
         this.pilot = pilot,
-        this.datetime = datetime,
+        this.coPilot = coPilot,
+        this.dates = dates,
         this.gate = gate,
-        this.route = route,
-        this.airline = airpline,
-        this.airport = airport
+        this.route = route
     }
     getGate(){
         return this.gate
     }
+    getPilot(){
+        return this.pilot
+    }
+    getDate(){
+        return this.dates
+    }
+    isDateEqual(date:Date){
+        return (this.dates.day == date.day && this.dates.month == date.month && this.dates.year == date.year);
+    }
+
+    getFlightId(){
+        return this.flightId
+    }
+
 }

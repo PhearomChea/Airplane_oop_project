@@ -1,6 +1,6 @@
 export class Meal{
-    meals:TypeMeal[] = [];
-    constructor(meals:TypeMeal[]){
+    meals:TypeMeal;
+    constructor(meals:TypeMeal){
         this.meals = meals
     }
 }

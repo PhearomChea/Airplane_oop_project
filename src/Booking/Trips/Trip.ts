@@ -16,7 +16,13 @@ export class Trip{
     getTypeTrip(){
         return this.typeTrip
     }
-    
+    getFlight(flightId:string){
+        for (let flight of this.flights){
+            if(flight.getFlightId()==flightId){
+                return flight;
+            }
+        }
+    }
 }
 
 export enum typeTrip{
