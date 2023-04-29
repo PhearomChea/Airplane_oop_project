@@ -2,7 +2,7 @@ export abstract class Person {
     constructor(
         firstName:string,
         lastName:string,
-        phoneNumber:number,
+        phoneNumber:string,
         email:string
         ) {}
 }

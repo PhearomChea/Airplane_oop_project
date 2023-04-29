@@ -4,7 +4,7 @@ export class Meal{
         this.meals = meals
     }
 }
-enum TypeMeal{
+export enum TypeMeal{
     BABY_MEAL = 'BABY MEAl',
     VEGETABLE = 'BEGETABLE'
 }

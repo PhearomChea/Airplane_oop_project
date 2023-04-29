@@ -6,7 +6,7 @@ import { Pilot } from "../Person/Employee/Pilot";
 import { Date } from "./Date/Date";
 import { Meal } from "./Meal/Meal"
 
-class Flight{
+export class Flight{
     private flightCode:string
     private meals:Meal[] = [];
     private pilot:Pilot
@@ -25,5 +25,7 @@ class Flight{
         this.airline = airpline,
         this.airport = airport
     }
-    
+    getGate(){
+        return this.gate
+    }
 }

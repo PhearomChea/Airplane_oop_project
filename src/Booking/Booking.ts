@@ -1,26 +1,38 @@
 import { Customer } from "../Person/Customer/Customer";
+import { Bag } from "./Trips/Bag";
 import { Ticket } from "./Trips/Ticket";
-import { Trip } from "./Trips/Trip";
+import { Trip, typeTrip } from "./Trips/Trip";
 
 export class Booking{
     private bookingId : string;
     private price : number;
     private ticket : Ticket;
-    private trips:Trip[] = [];
+    private trip:Trip;
     private customer:Customer;
-    constructor(bookingId:string,price:number,ticket:Ticket,trips:Trip[],customer:Customer){
+    private bages:Bag[]=[];
+    constructor(bookingId:string,price:number,ticket:Ticket,trip:Trip,customer:Customer,bags:Bag[]){
         this.bookingId = bookingId
         this.price = price
         this.ticket = ticket
-        this.trips = trips
+        this.trip = trip
         this.customer = customer
+        this.bages = bags
     }
-
-    getCustomerName(){
-        return this.customer
+    getBookingId(){
+        return this.bookingId;
     }
+    hasReturnTrip(){
+        return this.trip.getTypeTrip() === typeTrip.RETURN_TICKET; 
+    }
+    getCustomerReturnTrip(){
+        if (this.hasReturnTrip()){
+            if (this.trip.getTypeTrip() === typeTrip.RETURN_TICKET){
+                return this.customer
+            }
+        }
+        
+    }
+  
    
-    
-
     
 }

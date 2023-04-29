@@ -1,6 +1,6 @@
 import { Seat } from "./Seat";
 
-export class Airplan{
+export class Airplane{
     private ariplanId: string ;
     private numberSeat : number;
     private seat : Seat[] = []
