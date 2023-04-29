@@ -1,4 +1,5 @@
 import { Booking } from "./Booking/Booking"
+import { Flight } from "./Flight/Flight";
 import { Customer } from "./Person/Customer/Customer"
 
 export class BookingCompany{
@@ -34,5 +35,10 @@ export class BookingCompany{
         }
         return listCustomer;
     }
-
+    // getMealforFlight(flightId:string){
+    //     for (let booking of this.bookings){
+    //         for(let flight of booking.getTrips)
+    //         if(booking.getTrips().getFlight(flightId)?.flightId)
+    //     }
+    // }
 }

@@ -1,15 +1,24 @@
 import { Person } from "../Person";
 export class Employee extends Person{
-
-    employeeCategory:EmployeeCategories
-    constructor(employeeCategory:EmployeeCategories,firstName:string,lastName:string,phoneNumber:string,email:string){
-        super(firstName,lastName,phoneNumber,email)
-        this.employeeCategory = employeeCategory
+    protected pilotId:string;
+    protected salary: number;
+    constructor(pilotId:string,pilotType:pilotType,firstName:string,lastName:string,phoneNumber:string,email:string){
+        super(firstName,lastName,phoneNumber,email);
+        this.pilotId = pilotId;
+    }
+    getPilotId(){
+        return this.pilotId;
+    }
+    setSalaryEmployee(salary:number){
+        this.salary = salary;
+    }
+    getSalaryEmployee(){
+        return this.salary;
     }
 }
-
-export enum EmployeeCategories{
+export enum pilotType{
     PILOT = 'PILOT',
     CO_PILOT = 'CO_PILOT'
-
 }
+
+
