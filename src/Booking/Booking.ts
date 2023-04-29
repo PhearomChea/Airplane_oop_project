@@ -28,8 +28,5 @@ export class Booking{
         if (this.hasReturnTrip()){
             return this.customer
         }
-    }
-  
-   
-    
+    }  
 }
