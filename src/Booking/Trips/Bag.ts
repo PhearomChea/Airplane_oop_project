@@ -6,9 +6,9 @@ export enum BagWeght{
 }
 export class Bag {
     private bagCode :string;
-    private bagWegth : BagWeght
+    private bagWegth : BagWeght;
     constructor(bagCode:string, bagWeght:BagWeght){
         this.bagCode = bagCode;
-        this.bagWegth = bagWeght
-    }
-}
+        this.bagWegth = bagWeght;
+    };
+};

@@ -5,11 +5,10 @@ export enum TypeOfTicket{
     Bustiness_Class = "Bustiness Class"
 }
 export class Ticket {
-    private ticketCode :string
-    private typeOfTicket : TypeOfTicket
+    private ticketCode :string;
+    private typeOfTicket : TypeOfTicket;
     constructor(ticketCode:string,typeOfTicket : TypeOfTicket){
         this.ticketCode = ticketCode;
-        this.typeOfTicket = typeOfTicket
-    }
-   
-}
+        this.typeOfTicket = typeOfTicket;
+    }; 
+};

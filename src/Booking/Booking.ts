@@ -10,29 +10,44 @@ export class Booking{
     private ticket : Ticket;
     private trip:Trip;
     private customer:Customer;
-    private meal: Meal[];
+    private meals: Meal[];
     private bages:Bag[]=[];
-    constructor(bookingId:string,price:number,ticket:Ticket,trip:Trip,customer:Customer,meal:Meal[],bags:Bag[]){
-        this.bookingId = bookingId
-        this.price = price
-        this.ticket = ticket
-        this.trip = trip
-        this.customer = customer
-        this.meal = meal
-        this.bages = bags
-    }
-    getBookingId(){
+    constructor(bookingId:string,price:number,ticket:Ticket,trip:Trip,customer:Customer,meals:Meal[],bags:Bag[]){
+        this.bookingId = bookingId;
+        this.price = price;
+        this.ticket = ticket;
+        this.trip = trip;
+        this.customer = customer;
+        this.meals = meals;
+        this.bages = bags;
+    };
+
+    getBookingId():string
+    {
         return this.bookingId;
-    }
-    hasReturnTrip(){
+    };
+
+    hasReturnTrip():boolean
+    {
         return this.trip.getTypeTrip() === typeTrip.RETURN_TICKET; 
-    }
-    getCustomerReturnTrip(){
+    };
+
+    getCustomerReturnTrip():Customer | undefined
+    {
         if (this.hasReturnTrip()){
-            return this.customer
-        }
-    }
-  
-   
-    
-}
+            if(this.trip.getTypeTrip()=== typeTrip.RETURN_TICKET){
+                return this.customer;
+            };
+        };
+    };
+
+    getMeal():Meal[]
+    {
+        return this.meals
+    };
+
+    getTrips():Trip
+    {
+        return this.trip
+    };  
+};

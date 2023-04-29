@@ -1,5 +1,4 @@
 import { Flight } from "../../Flight/Flight";
-import { TypeOfTicket } from "./Ticket";
 
 export class Trip{
     private DeparturePlace:string;
@@ -11,21 +10,25 @@ export class Trip{
         this.DeparturePlace = departurePlace;
         this.DestinationPlace = destinaitonPlace;
         this.flights = flights;
-    }
+    };
 
-    getTypeTrip(){
+    getTypeTrip():typeTrip
+    {
         return this.typeTrip
-    }
-    getFlight(flightId:string){
+    };
+
+    getFlight(flightId:string):Flight | undefined
+    {
         for (let flight of this.flights){
             if(flight.getFlightId()==flightId){
                 return flight;
-            }
-        }
-    }
-}
+            };
+        };
+        return undefined
+    };
+};
 
 export enum typeTrip{
     RETURN_TICKET = "Return Ticket",
     NO_RETURN_TICKET = "Don't Return Ticket"
-}
+};

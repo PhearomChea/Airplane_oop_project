@@ -5,20 +5,27 @@ export class Employee extends Person{
     constructor(pilotId:string,pilotType:pilotType,firstName:string,lastName:string,phoneNumber:string,email:string){
         super(firstName,lastName,phoneNumber,email);
         this.pilotId = pilotId;
-    }
-    getPilotId(){
+    };
+
+    getPilotId():string
+    {
         return this.pilotId;
-    }
-    setSalaryEmployee(salary:number){
+    };
+
+    setSalaryEmployee(salary:number):void
+    {
         this.salary = salary;
-    }
-    getSalaryEmployee(){
+    };
+
+    getSalaryEmployee():number
+    {
         return this.salary;
-    }
-}
+    };
+};
+
 export enum pilotType{
     PILOT = 'PILOT',
     CO_PILOT = 'CO_PILOT'
-}
+};
 
 

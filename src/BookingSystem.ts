@@ -1,44 +1,51 @@
 import { Booking } from "./Booking/Booking"
 import { Flight } from "./Flight/Flight";
-import { Customer } from "./Person/Customer/Customer"
-
+import { Meal } from "./Flight/Meal/Meal";
+import { Customer } from "./Person/Customer/Customer";
 export class BookingCompany{
-    private companyName:string
+    private companyName:string;
     private bookings:Booking[] = [];
     constructor(companyName:string){
         this.companyName = companyName
-    }
+    };
 
-    addBooking(booking:Booking){
+    addBooking(booking:Booking):void
+    {
         this.bookings.push(booking);
-    }
-    getAllBooking(){
+    };
+
+    getAllBooking():Booking[]
+    {
         return this.bookings
-    }
+    };
     
-    // get bookinginformation by bookid
-    getBookingDetail(bookId:string){
+    getBookingDetail(bookId:string):Booking|undefined
+    {
         for (let booking of this.bookings){            
             if (booking.getBookingId() === bookId){
                 return booking;
-            }
-        }
-    }
+            };
+        };
+    };
    
-   
-    getAllCustomerReturnTrip(){
+    getAllCustomerReturnTrip():(Customer|undefined)[]
+    {
         let listCustomer = [];
         for (let booking of this.bookings){  
             if (booking.hasReturnTrip()){
                 listCustomer.push(booking.getCustomerReturnTrip())
-            }        
-        }
+            };     
+        };
         return listCustomer;
-    }
-    // getMealforFlight(flightId:string){
-    //     for (let booking of this.bookings){
-    //         for(let flight of booking.getTrips)
-    //         if(booking.getTrips().getFlight(flightId)?.flightId)
-    //     }
-    // }
+    };
+
+    getMealforFlight(flightId:string):Meal[] | undefined
+    {
+        for (let booking of this.bookings){
+            if (booking.getTrips().getFlight(flightId)?.getFlightId() == flightId){
+                return booking.getMeal();
+            };
+        };
+        return undefined;
+    };
 }

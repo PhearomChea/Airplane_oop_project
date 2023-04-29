@@ -1,12 +1,12 @@
 import { Time } from "../Time/Time"
 
 export class Date{
-    day:number
-    month:number
-    year:number
+    day:number;
+    month:number;
+    year:number;
     constructor(day:number,month:number,year:number){
-        this.day = day
-        this.month = month
-        this.year = year
+        this.day = day;
+        this.month = month;
+        this.year = year;
     }
 }
