@@ -24,8 +24,10 @@ let time2 = new Time(11,10)
 
 
 // Date time object ==========
-let day1 = new Date(10,5,2023,time1)
-let day2 = new Date(10,5,2023,time2)
+let day1 = new Date(10,5,2023)
+day1.setTime(time1);
+day1.setTime(time2)
+let day2 = new Date(10,5,2023)
 
 
 // Pilot object =========
@@ -65,18 +67,29 @@ let bag3 = new Bag('B03',BagWeght.weght1)
 // airplane object =======
 let airplane1 = new Airplane('F001',10)
 
-// airline object ===========
-let airline1 = new Airline('SreykaExpress');
 
 
 
-// airport object ==========
-let airport1 = new Airport('PPAIRPORT','PP');
+
 
 // flight object ==========
-let flight1 = new Flight('P-T01',[meal1,meal2],Pilot1,day1,gate1,route1,airline1,airport1)
-let flight2 = new Flight('P-T02',[meal1,meal2],Pilot2,day1,gate1,route1,airline1,airport1)
-let flight3 = new Flight('P-T03',[meal1,meal2],Pilot1,day1,gate1,route1,airline1,airport1)
+let flight1 = new Flight('P-T01',[meal1,meal2],Pilot1,day1,gate1,route1)
+let flight2 = new Flight('P-T02',[meal1,meal2],Pilot2,day1,gate1,route1)
+let flight3 = new Flight('P-T03',[meal1,meal2],Pilot1,day1,gate1,route1)
+
+// airline object ===========
+let airline1 = new Airline('SreykaExpress');
+airline1.addFlight(flight1);
+airline1.addFlight(flight2);
+airline1.addFlight(flight3);
+
+airline1.addEmployee(Pilot1)
+airline1.addEmployee(Pilot2)
+// airport object ==========
+let airport1 = new Airport('PPAIRPORT','PP');
+airport1.addFlight(flight1);
+airport1.addFlight(flight1);
+airport1.addFlight(flight1);
 // trip object ===========
 let trip1 = new Trip(typeTrip.NO_RETURN_TICKET,'PP','UK',[flight1,flight2]);
 let trip2 = new Trip(typeTrip.RETURN_TICKET,'PP','UK',[flight1,flight2]);
@@ -85,6 +98,7 @@ let trip2 = new Trip(typeTrip.RETURN_TICKET,'PP','UK',[flight1,flight2]);
 let booking1 = new Booking('booking1',300,ticket1,trip1,customer1,[bag1,bag2]);
 let booking2 = new Booking('booking2',500,ticket1,trip2,customer2,[bag1,bag2]);
 
+console.log(booking2.hasReturnTrip());
 
 
 // booking company object ===============
@@ -94,7 +108,7 @@ company1.addBooking(booking1) //
 company1.addBooking(booking2) // 
 
 // user Story 1 get get the full details of a passenger’s trip from their Booking Referent number------
-console.log(company1.getBookingDetail('booking1'));
+// console.log(company1.getBookingDetail('booking1'));
 
 // get bookingId or bookingReferent -----------
 // console.log(booking1.getBookingId());

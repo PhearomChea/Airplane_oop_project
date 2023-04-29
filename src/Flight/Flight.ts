@@ -13,17 +13,13 @@ export class Flight{
     private datetime:Date
     private gate:Gate
     private route:Route
-    private airline:Airline
-    private airport:Airport
-    constructor(flightCode:string,meals:Meal[],pilot:Pilot,datetime:Date,gate:Gate,route:Route,airpline:Airline,airport:Airport){
+    constructor(flightCode:string,meals:Meal[],pilot:Pilot,datetime:Date,gate:Gate,route:Route){
         this.flightCode = flightCode,
         this.meals = meals,
         this.pilot = pilot,
         this.datetime = datetime,
         this.gate = gate,
-        this.route = route,
-        this.airline = airpline,
-        this.airport = airport
+        this.route = route
     }
     getGate(){
         return this.gate
