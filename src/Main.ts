@@ -33,15 +33,15 @@ let day2 = new Date(10,5,2023)
 // Pilot object =========
 let Pilot1 = new Employee(EmployeeCategories.PILOT,'Sreyka','Thor',"987654321",'sreyka@gmail.com');
 let Pilot2 = new Employee(EmployeeCategories.PILOT,'PHEAROM','Chea',"987654321",'phearom@gmail.com');
-
+// console.log(Pilot1)
 // Co_pilot object =========
 let Co_Pilot1 = new Employee(EmployeeCategories.CO_PILOT,'Dara','De',"987654321",'dara@gmail.com');
 let Co_Pilot2 = new Employee(EmployeeCategories.CO_PILOT,'Nita','Van',"987654321",'nita@gmail.com');
 
 // Cutsomer object =========
-let customer1 = new Customer('Cus01)','Po','Pu',"0987654321",'popu@gmail.com')
-let customer2 = new Customer('Cus02)','Pit','Pup',"0987654321",'pitpup@gmail.com')
-
+let customer1 = new Customer('Cus01','Po','Pu',"0987654321",'popu@gmail.com')
+let customer2 = new Customer('Cus02','Pit','Pup',"0987654321",'pitpup@gmail.com')
+// console.log(customer2)
 // meal object ========
 let meal1 = new Meal([TypeMeal.BABY_MEAL,TypeMeal.VEGETABLE]);
 let meal2 = new Meal([TypeMeal.BABY_MEAL,TypeMeal.VEGETABLE]);
@@ -108,8 +108,8 @@ company1.addBooking(booking1) //
 company1.addBooking(booking2) // 
 
 // user Story 1 get get the full details of a passenger’s trip from their Booking Referent number------
-// console.log(company1.getBookingDetail('booking1'));
-
+console.log(company1.getBookingDetail('booking1'));
+// console.log(company1.getAllCustomerReturnTrip)
 // get bookingId or bookingReferent -----------
 // console.log(booking1.getBookingId());
 

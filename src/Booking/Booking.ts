@@ -24,12 +24,14 @@ export class Booking{
     hasReturnTrip(){
         return this.trip.getTypeTrip() === typeTrip.RETURN_TICKET; 
     }
-    // getCustomerReturnTrip():Customer|undefined{
-    //     if (this.trip.getTypeTrip() === typeTrip.RETURN_TICKET){
-    //         return this.customer
-    //     }
-    //     return undefined
-    // }
+    getCustomerReturnTrip(){
+        if (this.hasReturnTrip()){
+            if (this.trip.getTypeTrip() === typeTrip.RETURN_TICKET){
+                return this.customer
+            }
+        }
+        
+    }
   
    
     
